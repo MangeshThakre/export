@@ -1,0 +1,15 @@
+.ticker {
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  padding: 14px 0; overflow: hidden;
+}
+.inner {
+  display: flex; gap: 64px; white-space: nowrap;
+  animation: ticker 30s linear infinite;
+  width: max-content;
+}
+.item {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px; letter-spacing: 2px; color: var(--deep);
+  display: flex; align-items: center; gap: 16px;
+}
+.item::after { content: '◆'; font-size: 10px; }

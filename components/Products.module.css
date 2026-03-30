@@ -1,0 +1,58 @@
+.products { background: var(--deep); padding: 100px 5vw; }
+.header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 60px; flex-wrap: wrap; gap: 20px; }
+.tag { font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.title { font-family: 'Playfair Display', serif; font-size: clamp(32px,4vw,52px); font-weight: 700; line-height: 1.15; }
+.gold { color: var(--gold); }
+.btnOutline {
+  border: 1.5px solid rgba(200,146,42,0.4); color: var(--gold-light);
+  padding: 14px 28px; border-radius: 8px; font-size: 14px; text-decoration: none;
+  transition: all 0.2s;
+}
+.btnOutline:hover { background: rgba(200,146,42,0.1); border-color: var(--gold); }
+
+.filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+.filterBtn {
+  padding: 8px 20px; border-radius: 100px;
+  border: 1px solid rgba(200,146,42,0.25);
+  background: transparent; color: var(--muted);
+  font-size: 13px; font-family: inherit; cursor: pointer; transition: all 0.2s;
+}
+.filterBtn:hover, .active {
+  background: rgba(200,146,42,0.15) !important;
+  color: var(--gold-light) !important;
+  border-color: var(--gold) !important;
+}
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card {
+  background: var(--navy); border: 1px solid rgba(200,146,42,0.1);
+  border-radius: 20px; overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-6px); border-color: rgba(200,146,42,0.35); box-shadow: 0 24px 60px rgba(0,0,0,0.3); }
+.cardImg {
+  height: 200px; display: flex; align-items: center; justify-content: center;
+  font-size: 64px;
+  background: linear-gradient(145deg, var(--slate), var(--navy));
+  position: relative; overflow: hidden;
+}
+.cardImg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(10,15,30,0.8));
+}
+.cardBadge {
+  position: absolute; top: 14px; right: 14px; z-index: 1;
+  background: rgba(200,146,42,0.9); color: var(--deep);
+  font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 100px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.cardBody { padding: 24px; }
+.cardBody h3 { font-weight: 600; font-size: 17px; margin-bottom: 8px; }
+.cardBody p { color: var(--muted); font-size: 13px; line-height: 1.6; margin-bottom: 18px; }
+.cardMeta { display: flex; align-items: center; justify-content: space-between; }
+.origin { font-size: 12px; color: var(--muted); }
+.link { color: var(--gold-light); font-size: 13px; font-weight: 600; text-decoration: none; transition: letter-spacing 0.2s; }
+.link:hover { letter-spacing: 0.5px; }
+
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }

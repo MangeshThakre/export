@@ -1,0 +1,46 @@
+.about { background: var(--deep2); padding: 100px 5vw; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+
+.imgCol { position: relative; }
+.imgBox {
+  width: 100%; aspect-ratio: 4/5;
+  background: linear-gradient(145deg, var(--navy), var(--slate));
+  border-radius: 24px; overflow: hidden; position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.imgPattern {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(45deg, rgba(200,146,42,0.05) 0, rgba(200,146,42,0.05) 1px, transparent 0, transparent 50%);
+  background-size: 20px 20px;
+}
+.imgEmoji { position: absolute; }
+.imgMain { font-size: 120px; opacity: 0.15; position: relative; z-index: 1; }
+
+.badge {
+  position: absolute; bottom: 28px; left: -28px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--deep); border-radius: 16px; padding: 20px 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+.badgeNum { font-family: 'Bebas Neue', sans-serif; font-size: 42px; line-height: 1; }
+.badgeTxt { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; }
+
+.tag { font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.title { font-family: 'Playfair Display', serif; font-size: clamp(32px,4vw,52px); font-weight: 700; line-height: 1.15; margin-bottom: 20px; }
+.gold { color: var(--gold); }
+.body { color: var(--muted); font-size: 16px; line-height: 1.8; }
+
+.features { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+.feat { display: flex; gap: 18px; align-items: flex-start; }
+.featIcon {
+  width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+  background: rgba(200,146,42,0.1); border: 1px solid rgba(200,146,42,0.25);
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+}
+.featTitle { font-weight: 600; margin-bottom: 6px; font-size: 16px; }
+.featDesc { color: var(--muted); font-size: 14px; line-height: 1.7; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .badge { left: auto; right: 20px; }
+}
