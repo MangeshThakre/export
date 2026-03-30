@@ -13,10 +13,10 @@ export default function About() {
         {/* Image column */}
         <div className={`${styles.imgCol} animate-in`}>
           <div className={styles.imgBox}>
-            <div className={styles.imgPattern} />
+            {/* <div className={styles.imgPattern} />
             <div className={styles.imgEmoji} style={{ position: 'absolute', top: 40, right: 40, fontSize: 60, opacity: 0.1 }}>💊</div>
             <div className={styles.imgEmoji} style={{ position: 'absolute', bottom: 60, left: 40, fontSize: 60, opacity: 0.1 }}>🫚</div>
-            <div className={styles.imgMain}>🌾</div>
+            <div className={styles.imgMain}>🌾</div> */}
           </div>
           <div className={styles.badge}>
             <div className={styles.badgeNum}>10+</div>
@@ -28,13 +28,13 @@ export default function About() {
         <div className="animate-in">
           <div className={styles.tag}>About SVExportGlobal</div>
           <h2 className={styles.title}>
-            Your Trusted Partner in{' '}
+            Your Trusted Partner in{" "}
             <span className={styles.gold}>Global Commerce</span>
           </h2>
           <p className={styles.body}>
-            We started our business operations ten years back and have grown into a globally
-            recognized exporter. With 2000+ happy clients across 25 nations, we are India's
-            partner for premium quality exports.
+            We started our business operations ten years back and have grown
+            into a globally recognized exporter. With 2000+ happy clients across
+            25 nations, we are India's partner for premium quality exports.
           </p>
           <div className={styles.features}>
             {features.map((f) => (
@@ -50,5 +50,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
